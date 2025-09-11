@@ -18,9 +18,9 @@ except FileNotFoundError:
 
 # Memuat data pelatihan untuk referensi kolom
 try:
-    df_train = pd.read_csv('balanced_data.csv')
+    df_train = pd.read_csv('database.csv')
 except FileNotFoundError:
-    st.error("Error: File 'balanced_data.csv' tidak ditemukan.")
+    st.error("Error: File 'database.csv' tidak ditemukan.")
     st.stop()
 
 # Kolom numerik dan kategorikal
@@ -125,4 +125,5 @@ if submit_button:
             st.write(f"{key}: {value}")
 
     except Exception as e:
+
         st.error(f"Error: {str(e)}. Pastikan input valid dan sesuai dengan format.")
