@@ -35,7 +35,7 @@ if st.sidebar.button("Prediksi"):
     })
 
     # Load model (asumsi sudah dilatih dan disimpan)
-    with open('log_reg_model.pkl', 'rb') as file:
+    with open('lr_model.pkl', 'rb') as file:
         log_reg = pickle.load(file)
     with open('xgb_model.pkl', 'rb') as file:
         xgb_model = pickle.load(file)
@@ -72,3 +72,4 @@ st.write("""
 - Model dilatih pada dataset kredit mobil Mazda dengan 5 fitur utama.
 - Pastikan input sesuai dengan rentang data asli untuk hasil optimal.
 """)
+
